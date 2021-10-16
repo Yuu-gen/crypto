@@ -37,14 +37,14 @@ public class Main {
 		BigInteger product = n;
 		BigInteger rootN = n.sqrt();
 		BigInteger p;
-		BigInteger q = BigInteger.TWO; //n =  12100889781898389029 ist 64-Bit ergo => 2 32-Bitzahlen
+		BigInteger q = BigInteger.probablePrime(31, new Random());
+		//BigInteger q = BigInteger.TWO; //n =  12100889781898389029 ist 64-Bit ergo => 2 32-Bitzahlen
 		BigInteger counter = BigInteger.ZERO;
 		while (!n.mod(q).equals(BigInteger.ZERO)) {
 			//System.out.println(q);
-			counter.add(BigInteger.ONE);
-
+			counter = counter.add(BigInteger.ONE);
 			q = q.nextProbablePrime();
-			if (counter.equals(new BigInteger("1000000000"))) {
+			if (counter.equals(new BigInteger("10000"))) {
 				System.out.println(q);
 				counter = BigInteger.ZERO;
 			}
