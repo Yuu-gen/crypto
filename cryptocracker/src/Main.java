@@ -12,7 +12,7 @@ public class Main {
 // Generate new Key Pair 		
 		KeyPair keyPair = new KeyPair(100, true);
 // Simulate encryption and decryption of a plain Text		
-		String plainText = "Das Leben ist sch�n"; 
+		String plainText = "Das Leben ist schön";
 		System.out.println("Klartext = " + plainText);
 		
 		BigInteger encoded = coder.encode(plainText);
