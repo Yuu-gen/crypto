@@ -3,7 +3,7 @@ import java.math.BigInteger;
 import rsa.Coder;
 import rsa.Crypter;
 import rsa.KeyPair;
-import rsa.PrimeAnalysis;
+//import rsa.PrimeAnalysis;
 
 public class Main {
 	private static Coder coder = new Coder();
@@ -12,7 +12,7 @@ public class Main {
 // Generate new Key Pair 		
 		KeyPair keyPair = new KeyPair(100, true);
 // Simulate encryption and decryption of a plain Text		
-		String plainText = "Das Leben ist schön"; 
+		String plainText = "Das Leben ist schï¿½n"; 
 		System.out.println("Klartext = " + plainText);
 		
 		BigInteger encoded = coder.encode(plainText);
